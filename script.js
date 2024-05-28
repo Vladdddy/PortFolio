@@ -42,3 +42,14 @@ window.addEventListener('scroll', function () {
     }
 });
 
+function acceptCookies() {
+    document.getElementById('cookie-consent').style.display = 'none';
+    // Add your code to handle cookie acceptance here
+    console.log('Cookies accepted');
+}
+
+function declineCookies() {
+    document.getElementById('cookie-consent').style.display = 'none';
+    // Add your code to handle cookie decline here
+    console.log('Cookies declined');
+}
