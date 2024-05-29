@@ -23,7 +23,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -64,7 +64,7 @@ body {
     padding: 2rem;
     margin: 0.5rem;
     background-color: var(--background_nav_color);
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 3px 3px 6px var(--box_shadow);
     height: 80px;
     width: calc(100vw - (100vw - 100%));
@@ -73,7 +73,7 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
-.navbar a {
+.navbar .navvbarr {
     position: relative;
     font-size: 1.6rem;
     font-family: "Cabin", sans-serif;
@@ -86,7 +86,7 @@ body {
     margin: 0 0 0 5rem;
 }
 
-.navbar a::after {
+.navbar .navvbarr::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -99,14 +99,14 @@ body {
     transition: width 0.3s;
 }
 
-.navbar a:hover {
+.navbar .navvbarr:hover {
     background: linear-gradient(var(--gradientcolor_nav_hover), var(--gradientcolor_navv_hover));
     background-clip: text;
     color: transparent;
     cursor: pointer;
 }
 
-.navbar a:hover::after {
+.navbar .navvbarr:hover::after {
     width: 30px;
 }
 
@@ -697,3 +697,96 @@ body {
 .ahref:hover {
     color: #2fb3d8;
 }
+
+.Btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(var(--gradientcolor_nav), var(--gradientcolor_navv));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+    margin-left: 3rem;
+}
+
+.svgIcon {
+    fill: rgb(214, 178, 255);
+}
+
+.icon2 {
+    width: 18px;
+    height: 5px;
+    border-bottom: 2px solid rgb(182, 143, 255);
+    border-left: 2px solid rgb(182, 143, 255);
+    border-right: 2px solid rgb(182, 143, 255);
+}
+
+.tooltip {
+    position: absolute;
+    right: -105px;
+    opacity: 0;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(12, 12, 12);
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    left: -5%;
+    transition-duration: .3s;
+}
+
+.Btn:hover .tooltip {
+    opacity: 1;
+    transition-duration: .3s;
+}
+
+.Btn:hover {
+    background: linear-gradient(var(--gradientcolor_nav_hover), var(--gradientcolor_navv_hover));
+    transition-duration: .3s;
+}
+
+.Btn:hover .icon2 {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    border-left: 2px solid rgb(235, 235, 235);
+    border-right: 2px solid rgb(235, 235, 235);
+}
+
+.Btn:hover .svgIcon {
+    fill: rgb(255, 255, 255);
+    animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/*? --- Responsive --- */
