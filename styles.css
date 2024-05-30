@@ -790,7 +790,7 @@ body {
 }
 
 /*? --- Responsive --- */
-/*
+
 @media only screen and (min-width: 430px) {
     .navbar {
         display: flex;
@@ -858,4 +858,3 @@ body {
         box-shadow: 3px 3px 6px var(--box_shadow);
     }
 }
-*/
