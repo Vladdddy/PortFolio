@@ -71,6 +71,7 @@ body {
     overflow-y: hidden;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    user-select: none;
 }
 
 .navbar .navvbarr {
@@ -226,7 +227,6 @@ body {
     padding: 0.6em 1em;
     gap: 0.4rem;
     border-radius: 30px;
-    cursor: pointer;
     text-shadow: 2px 2px 3px rgba(184, 17, 184, 0.5);
     background: linear-gradient(15deg, #880088, #28a9d8, #1290d3, #880088) no-repeat;
     background-size: 300%;
@@ -253,6 +253,7 @@ body {
     padding: 5rem;
     gap: 10px;
     margin-top: -4rem;
+    user-select: none;
 }
 
 .box_container {
@@ -280,7 +281,6 @@ body {
 }
 
 .box1:hover {
-    cursor: pointer;
     animation: boxHoverAnimation 0.6s ease forwards;
     /* Apply animation */
 }
@@ -391,16 +391,12 @@ body {
     width: fit-content;
     margin-bottom: 30px;
     animation: bannermove 12s linear infinite;
+    user-select: none;
 }
 
 .imagecarousel img {
     margin: 2rem 20rem 2rem 20rem;
     border-radius: 5px;
-}
-
-.imagecarousel img:hover {
-    cursor: pointer;
-    opacity: 80%;
 }
 
 .add_competence {
@@ -480,7 +476,10 @@ body {
     fill: none;
     stroke-width: 2.8;
     stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
+}
+
+.animate .circle {
+    animation: progress 1.5s ease-out forwards;
 }
 
 @keyframes progress {
@@ -519,11 +518,6 @@ body {
 
 .circular-chart.canva .circle {
     stroke: #00c2ca;
-}
-
-.circular-chart:hover {
-    cursor: pointer;
-    width: 30%;
 }
 
 .percentage {
@@ -790,7 +784,7 @@ body {
 }
 
 /*? --- Responsive --- */
-
+/*
 @media only screen and (min-width: 430px) {
     .navbar {
         display: flex;

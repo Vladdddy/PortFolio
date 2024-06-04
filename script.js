@@ -53,3 +53,33 @@ function declineCookies() {
     // Add your code to handle cookie decline here
     console.log('Cookies declined');
 }
+
+window.addEventListener("scroll", function () {
+    var skillsSection = document.querySelector("#graph");
+    var skillsSectionPosition = skillsSection.getBoundingClientRect();
+    var windowHeight = window.innerHeight;
+    var circularChartsSkills = skillsSection.querySelectorAll(".circular-chart");
+
+    circularChartsSkills.forEach(function (chart) {
+        if (
+            skillsSectionPosition.top < windowHeight &&
+            skillsSectionPosition.bottom >= 0 &&
+            chart.getBoundingClientRect().top < windowHeight
+        ) {
+            if (!chart.classList.contains("animate")) {
+                chart.classList.add("animate");
+            }
+        } else {
+            chart.classList.remove("animate");
+        }
+    });
+
+
+});
+
+document.getElementById('downloadButton').addEventListener('click', function () {
+    const link = document.createElement('a');
+    link.href = 'cv.pdf';
+    link.download = 'cv.pdf';
+    link.click();
+});
