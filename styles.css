@@ -121,6 +121,34 @@ body {
     cursor: pointer;
 }
 
+.downloadcv {
+    font-size: 1.5rem;
+    width: fit-content;
+    display: flex;
+    padding: 0.6em 0.6em;
+    gap: 0.4rem;
+    border-radius: 30px;
+    text-shadow: 2px 2px 3px rgba(184, 17, 184, 0.5);
+    background: linear-gradient(var(--gradientcolor_nav), var(--gradientcolor_navv));
+    transition: background 0.3s ease;
+    margin: 0 0 0 3rem;
+}
+
+.downloadcv .downloada {
+    position: relative;
+    font-size: 1.3rem;
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    color: var(--body_color);
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.downloadcv:hover {
+    cursor: pointer;
+    background: linear-gradient(var(--gradientcolor_nav_hover), var(--gradientcolor_navv_hover));
+}
+
 .body_text {
     margin: 10rem 6.5rem 0 8rem;
     font-size: 3rem;
