@@ -83,3 +83,26 @@ document.getElementById('downloadButton').addEventListener('click', function () 
     link.download = 'cv.pdf';
     link.click();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var popup = document.getElementById("popup");
+    var userIcon = document.getElementById("userIcon");
+    var span = document.getElementsByClassName("close")[0];
+
+    userIcon.onclick = function () {
+        popup.style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+
+    span.onclick = function () {
+        popup.style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+
+    window.onclick = function (event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    }
+});
