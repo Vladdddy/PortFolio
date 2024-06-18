@@ -96,14 +96,13 @@ body {
     width: 0;
     height: 3px;
     border-radius: 5px;
-    background: linear-gradient(var(--gradientcolor_nav_hover), var(--gradientcolor_navv_hover));
+    background: linear-gradient(var(--gradientcolor_nav), var(--gradientcolor_navv));
+    opacity: 0.9;
     transition: width 0.3s;
 }
 
 .navbar .navvbarr:hover {
-    background: linear-gradient(var(--gradientcolor_nav_hover), var(--gradientcolor_navv_hover));
-    background-clip: text;
-    color: transparent;
+    opacity: 0.9;
     cursor: pointer;
 }
 
