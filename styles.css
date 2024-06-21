@@ -110,9 +110,12 @@ body {
     width: 30px;
 }
 
+.user {
+    margin-right: 26rem;
+}
+
 .user img {
     width: 45px;
-    margin-right: 26rem;
 }
 
 .user img:hover {
